@@ -23,6 +23,7 @@
 </head>
 
 <body class="bg-gradient-primary">
+    @include('sweetalert::alert')
 
     <div class="container">
 
@@ -48,7 +49,7 @@
                                             </div>
                                         @endif
                                     </div>
-                                    <form class="user" action="/" method="POST">
+                                    <form class="user" action={{ route('login') }} method="POST">
                                         @csrf
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
@@ -65,9 +66,9 @@
                                         </button>
                                     </form>
                                     <hr>
-                                    <div class="text-center">
+                                    {{-- <div class="text-center">
                                         <a class="small" href="/register">Create an Account!</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>

@@ -2,7 +2,7 @@
 
 @section('body')
     <h1 class="mb-5">Tambah Buku</h1>
-    @if (count($errors) > 0)
+    {{-- @if (count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -10,7 +10,7 @@
                 @endforeach
             </ul>
         </div>
-    @endif
+    @endif --}}
     <form action="/buku/create" method="POST">
         @csrf
         <div class="mb-3 col-5">

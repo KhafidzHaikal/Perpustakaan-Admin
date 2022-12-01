@@ -52,9 +52,8 @@ class RuanganController extends Controller
         ]);
 
         ruangan::create($validatedata);
-        $request->session()->flash('success', 'Ruangan berhasil ditambahkan');
-
-        return redirect('ruangan');
+        
+        return redirect('ruangan')->with('toast_success', 'Ruangan Berhasil Ditambahkan');
 
     }
 
@@ -105,7 +104,7 @@ class RuanganController extends Controller
         $id = $request->id;
         $updateruangan = ruangan::find($ruangan);
         $updateruangan->update($request->all());
-        return redirect('ruangan')->with('success', 'Ruangan Berhasil di update');
+        return redirect('ruangan')->with('toast_success', 'Ruangan Berhasil Diubah');
     }
 
     /**
@@ -117,6 +116,6 @@ class RuanganController extends Controller
     public function destroy(ruangan $ruangan)
     {
         ruangan::destroy($ruangan->id);
-        return redirect('ruangan')->with('success', 'Ruangan Berhasil dihapus!!');
+        return redirect('ruangan')->with('toast_success', 'Ruangan Berhasil Dihapus');
     }
 }

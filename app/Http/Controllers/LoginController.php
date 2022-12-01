@@ -21,14 +21,18 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/dashboard');
+            return redirect('/dashboard')->withToastSuccess('Selamat Datang di Halaman Dashboard');
         }
 
-        return back()->with('loginError', 'Username and/or Password Failed!!');
+        return back()->with('toast_error', 'Username dan Password Salah');
     }
     
-    public function logout(){
+    public function logout(Request $request){
         Auth::logout();
-        return redirect('/');
+        $request->session()->invalidate();
+ 
+        $request->session()->regenerateToken();
+     
+        return redirect('/')->with('toast_success', 'Berhasil Logout');
     }
 }

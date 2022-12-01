@@ -54,9 +54,9 @@ class BukuController extends Controller
 
         
         buku::create($validatedata);
-        $request->session()->flash('success', 'Pasien Berhasil Ditambahkan');
+        // $request->session()->flash('success', 'Pasien Berhasil Ditambahkan');
         
-        return redirect('/buku');
+        return redirect('/buku')->with('toast_success', 'Buku Berhasil Ditambahkan');
         
     }
 
@@ -106,7 +106,7 @@ class BukuController extends Controller
         $id = $request->id;
         $updatebuku = buku::find($buku);
         $updatebuku->update($request->all());
-        return redirect('/buku')->with('success', 'buku Berhasil Diubah');
+        return redirect('/buku')->with('toast_success', 'Buku Berhasil Diubah');
     }
 
     /**
@@ -118,6 +118,6 @@ class BukuController extends Controller
     public function destroy(buku $buku)
     {
         buku::destroy($buku->id);
-        return redirect('/buku')->with('success', 'Data Berhasil Dihapus');
+        return redirect('/buku')->with('toast_success', 'Buku Berhasil Dihapus');
     }
 }
