@@ -26,10 +26,6 @@
             <input type="text" class="form-control" id="tipe" name="tipe" required>
         </div>
         <div class="mb-3 col-5">
-            <label for="harga" class="form-label">Harga</label>
-            <input type="text" class="form-control" id="harga" name="harga" required>
-        </div>
-        <div class="mb-3 col-5">
             <label for="ketersediaan" class="form-label">Tersedia</label>
             <input type="text" class="form-control" id="ketersediaan" name="ketersediaan" required>
         </div>

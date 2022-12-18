@@ -18,7 +18,6 @@ class CreateRuangansTable extends Migration
             $table->string('kode_ruangan')->unique();
             $table->string('nama_ruangan');
             $table->string('tipe');
-            $table->string('harga');
             $table->integer('ketersediaan');
             $table->string('tempat_ruangan');
             $table->timestamps();

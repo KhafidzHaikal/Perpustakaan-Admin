@@ -46,7 +46,6 @@ class RuanganController extends Controller
             'nama_ruangan' => 'required',
             'kode_ruangan' => 'required',
             'tipe' => 'required',
-            'harga' => 'required',
             'ketersediaan' => 'required',
             'tempat_ruangan' => 'required'
         ]);
@@ -95,7 +94,6 @@ class RuanganController extends Controller
             'nama_ruangan' => 'required',
             'kode_ruangan' => 'required',
             'tipe' => 'required',
-            'harga' => 'required',
             'ketersediaan' => 'required',
             'tempat_ruangan' => 'required'
         ];

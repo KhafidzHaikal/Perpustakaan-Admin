@@ -18,10 +18,6 @@
         <input type="text" class="form-control" id="tipe" name="tipe" value="{{ $ruangan->tipe }}">
     </div>
     <div class="mb-3 col-5">
-        <label for="harga" class="form-label">Harga</label>
-        <input type="text" class="form-control" id="harga" name="harga" value="{{ $ruangan->harga }}">
-    </div>
-    <div class="mb-3 col-5">
         <label for="ketersediaan" class="form-label">Tersedia</label>
         <input type="text" class="form-control" id="ketersediaan" name="ketersediaan" value="{{ $ruangan->ketersediaan }}">
     </div>

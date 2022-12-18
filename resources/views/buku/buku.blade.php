@@ -42,8 +42,8 @@
                             <td>{{ $buku->penerbit }}</td>
                             <td>{{ $buku->tahun_terbit }}</td>
                             <td>{{ $buku->tempat_buku }}</td>
-                            <td>
-                                <a href="{{ route('edit_buku', $buku->id)}}" class="btn btn-warning">Edit</a>
+                            <td style="display: flex">
+                                <a href="{{ route('edit_buku', $buku->id)}}" class="btn btn-warning mr-1">Edit</a>
                                 <form action="{{ route('delete_buku', $buku->id)}}" method="POST" class="d-inline">
                                     @method('delete')
                                     @csrf

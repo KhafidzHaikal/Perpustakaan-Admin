@@ -10,7 +10,7 @@ class ruangan extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_ruangan', 'kode_ruangan', 'tipe', 'harga', 'ketersediaan', 'tempat_ruangan'
+        'nama_ruangan', 'kode_ruangan', 'tipe', 'ketersediaan', 'tempat_ruangan'
     ];
 
     protected $guarded = [
