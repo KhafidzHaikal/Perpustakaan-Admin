@@ -14,7 +14,6 @@
                         <th>Kode ruangan</th>
                         <th>Nama ruangan</th>
                         <th>Tipe</th>
-                        <th>Harga</th>
                         <th>Tersedia</th>
                         <th>Tempat ruangan</th>
                         <th>Action</th>
@@ -26,7 +25,6 @@
                         <th>Kode ruangan</th>
                         <th>Nama ruangan</th>
                         <th>Tipe</th>
-                        <th>Harga</th>
                         <th>Tersedia</th>
                         <th>Tempat ruangan</th>
                         <th>Action</th>
@@ -39,7 +37,6 @@
                         <td>{{ $ruangan->kode_ruangan }}</td>
                         <td>{{ $ruangan->nama_ruangan }}</td>
                         <td>{{ $ruangan->tipe }}</td>
-                        <td>{{ $ruangan->harga }}</td>
                         <td>{{ $ruangan->ketersediaan }}</td>
                         <td>{{ $ruangan->tempat_ruangan }}</td>
                         <td>
